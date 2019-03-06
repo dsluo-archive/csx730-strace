@@ -2,7 +2,10 @@
 
 ### References
 
+* [ASCII Chart](https://en.cppreference.com/w/c/language/ascii)
 * [`write(2)`](http://man7.org/linux/man-pages/man2/write.2.html)
+* [`malloc(3)`](http://man7.org/linux/man-pages/man3/malloc.3.html)
+* [`mmap(2)`](http://man7.org/linux/man-pages/man2/mmap.2.html)
 * [`brk(2)`, `sbrk(2)` - change data segment size](http://man7.org/linux/man-pages/man2/brk.2.html)
 * [`strace(1)` - trace system calls and signals](http://man7.org/linux/man-pages/man1/strace.1.html)
 
@@ -29,36 +32,47 @@ find the assembly notes provided in recent lecture modules on eLC useful.
    for each group member. Then, **sign the piece of paper that your instructor has at the front 
    of the room.**
    
-1. In `main.c` write and test simple C program that prints the numbers `0` through `100` (exclusive)
-   using `setjmp` and `longjmp` instead of loops or recursion. Your code should make use of the
-   return value of `setjmp` to increment the number. A simple `Makefile` is provided to make 
-   compiling easier.
+1. In `main.c`, write and test a simple C program that prints the numbers `0` through `100` (exclusive)
+   using the `write` system call instead of something more convenient like `printf(3)`. Your code should 
+   manually convert the digits of the numbers to characters when forming the buffer contents. 
+   No dynamic memory allocation is needed for this. You will likely find the ASCII table 
+   referenced at the top of this page useful -- the characters `0`, `1`, .. , `9` have
+   `char` values `Ox30`, `0x31`, .., `0x39`.
 
-1. Make sure your program compiles, assembles, and links before continuing.
-
-1. In `SUBMISSION.md`, include a list of the list symbols from `main.o` and `main`.
-
-1. In `SUBMISSION.md`, include a list of the shared library dependencies for `main`.
+1. Make sure your program compiles and runs.
 
 **CHECKPOINT:** Ask your instructor if you have any questions.
 
-1. In `SUBMISSION.md`, indicate the file where the machine code for `setjmp` is defined.
-   You should probably note the command(s) you used to find it.
+1. Run your program with `strace(1)` to see the system call trace. Copy this output
+   to the designated section in `SUBMISSION.md`.
    
-1. Use `objdump` or `gdb` to find the assembly code for `setjmp`. Follow the chain of
-   calls or jumps that are all labeled `setjmp` or similar and include their assembly in the
-   `SETJMP.md` file. You may copy/paste.
+1. Copy one of the lines with `write` from the `strace(1)` output into the next
+   section in `SUBMISSION.md`. 
    
-1. Use `objdump` or `gdb` to find the assembly code for `longjmp`. Follow the chain of
-   calls or jumps that are all labeled `longjmp` or similar and include their assembly in the
-   `LONGJMP.md` file. You may copy/paste.
+1. Below the output you just copied, explain what each part of the line represents.
+   You should replace the text, "Write details here..."
+   
+**CHECKPOINT:** Ask your instructor if you have any questions.
+
+1. At the end of `main.c`, write and test simple C program that prints the numbers `0` through `100` (exclusive)
+   using the `write` system call instead of something more convenient like `printf(3)`. Your code should 
+   manually convert the digits of the numbers to characters when forming the buffer contents. 
+   No dynamic memory allocation is needed for this. You will likely find the ASCII table 
+   referenced at the top of this page useful -- the characters `0`, `1`, .. , `9` have
+   `char` values `Ox30`, `0x31`, .., `0x39`.
+
+1. When does `malloc(3)` switch from `brk(2)` to `mmap(2)`?
+
+
+   
+**CHECKPOINT:**
 
 1. **Before 3:15 PM (or 11:55 for partial)**, double check that your group member names are listed in 
    `SUBMISSION.md` as well as the piece of paper that your instructor has at the front of the room, then
    submit your activity attempt using the `submit` command. From the parent directory:
    
    ```
-   $ submit csx730-libdis csx730
+   $ submit csx730-brk csx730
    ```
 
 <hr/>
