@@ -55,7 +55,7 @@ find the assembly notes provided in recent lecture modules on eLC useful.
 
 1. In the last section of `SUBMISSION.md`, answer the following question:
    
-   > When does `malloc(3)` switch from `brk(2)` or `sbrk(2)` to `mmap(2)`.
+   > When does `malloc(3)` switch from `brk(2)` or `sbrk(2)` to `mmap(2)`?
    
    Near the end of `main` in `main.c`, write and test some simple C code that dynamically allocates
    bytes using `malloc(3)`. Use the output of `strace(1)` on your program to determin whether
