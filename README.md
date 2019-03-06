@@ -1,4 +1,9 @@
-# csx730-strace Program Break Activity
+# csx730-strace System Call Trace Activity
+
+This activity explores the use of `strace(1)` to trace system calls. In particular,
+the last part of the activity will provide insight on how to observe the activity
+of memory allocators in your program, a useful skill for those who might need to
+write a dynamic memory allocator.
 
 ### References
 
