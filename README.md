@@ -3,9 +3,9 @@
 ### References
 
 * [ASCII Chart](https://en.cppreference.com/w/c/language/ascii)
-* [`write(2)`](http://man7.org/linux/man-pages/man2/write.2.html)
-* [`malloc(3)`](http://man7.org/linux/man-pages/man3/malloc.3.html)
-* [`mmap(2)`](http://man7.org/linux/man-pages/man2/mmap.2.html)
+* [`write(2)` - write to a file descriptor](http://man7.org/linux/man-pages/man2/write.2.html)
+* [`malloc(3)` - allocate dynamic memory](http://man7.org/linux/man-pages/man3/malloc.3.html)
+* [`mmap(2)` - map files or devices into memory](http://man7.org/linux/man-pages/man2/mmap.2.html)
 * [`brk(2)`, `sbrk(2)` - change data segment size](http://man7.org/linux/man-pages/man2/brk.2.html)
 * [`strace(1)` - trace system calls and signals](http://man7.org/linux/man-pages/man1/strace.1.html)
 
