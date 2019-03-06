@@ -64,7 +64,7 @@ find the assembly notes provided in recent lecture modules on eLC useful.
    
    Near the end of `main` in `main.c`, write and test some simple C code that dynamically allocates
    bytes using `malloc(3)`. Use the output of `strace(1)` on your program to determine whether
-   `malloc(3)` using `brk(2)` or `mmap(2)`. Adjust the program and retest until you see the
+   `malloc(3)` is using `brk(2)` or `mmap(2)`. Adjust the program and retest until you see the
    switch. In `SUBMISSION.md`, you should replace the text "Write details here..." with you answer
    to this question.
    
