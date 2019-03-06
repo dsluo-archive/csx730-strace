@@ -1,4 +1,4 @@
-# csx730-brk Program Break Activity
+# csx730-strace Program Break Activity
 
 ### References
 
@@ -14,13 +14,13 @@
 1. Form into **small groups of two or three** people. These instructions assume that at least one group 
    member is logged into the Nike. 
 
-1. Use Git to clone the repository for this exercise onto Nike into a subdirectory called `csx730-libdis`:
+1. Use Git to clone the repository for this exercise onto Nike into a subdirectory called `csx730-strace`:
 
    ```
-   $ git clone https://github.com/cs1730/csx730-brk.git
+   $ git clone https://github.com/cs1730/csx730-strace.git
    ```
 
-1. Change into the `csx730-brk` directory that was just created and look around. There should be a
+1. Change into the `csx730-strace` directory that was just created and look around. There should be a
    couple different files already present.
    
 ### Activity Questions
@@ -32,12 +32,11 @@ find the assembly notes provided in recent lecture modules on eLC useful.
    for each group member. Then, **sign the piece of paper that your instructor has at the front 
    of the room.**
    
-1. In `main.c`, write and test a simple C program that prints the numbers `0` through `100` (exclusive)
+1. In `main.c`, write and test a simple C program that prints the numbers `0` through `9` (exclusive)
    using the `write` system call instead of something more convenient like `printf(3)`. Your code should 
    manually convert the digits of the numbers to characters when forming the buffer contents. 
    No dynamic memory allocation is needed for this. You will likely find the ASCII table 
-   referenced at the top of this page useful -- the characters `0`, `1`, .. , `9` have
-   `char` values `Ox30`, `0x31`, .., `0x39`.
+   referenced at the top of this page useful. You may use loops.
 
 1. Make sure your program compiles and runs.
 
@@ -54,16 +53,14 @@ find the assembly notes provided in recent lecture modules on eLC useful.
    
 **CHECKPOINT:** Ask your instructor if you have any questions.
 
-1. At the end of `main.c`, write and test simple C program that prints the numbers `0` through `100` (exclusive)
-   using the `write` system call instead of something more convenient like `printf(3)`. Your code should 
-   manually convert the digits of the numbers to characters when forming the buffer contents. 
-   No dynamic memory allocation is needed for this. You will likely find the ASCII table 
-   referenced at the top of this page useful -- the characters `0`, `1`, .. , `9` have
-   `char` values `Ox30`, `0x31`, .., `0x39`.
-
-1. When does `malloc(3)` switch from `brk(2)` to `mmap(2)`?
-
-
+1. In the last section of `SUBMISSION.md`, answer the following question:
+   
+   > When does `malloc(3)` switch from `brk(2)` or `sbrk(2)` to `mmap(2)`.
+   
+   Near the end of `main` in `main.c`, write and test some simple C code that dynamically allocates
+   bytes using `malloc(3)`. Use the output of `strace(1)` on your program to determin whether
+   `malloc(3)` using `brk(2)` or `mmap(2)`. Adjust the program and retest untill you see the
+   switch. In `SUBMISSION.md`, you should replace the text, "Write details here..."
    
 **CHECKPOINT:**
 
@@ -72,12 +69,12 @@ find the assembly notes provided in recent lecture modules on eLC useful.
    submit your activity attempt using the `submit` command. From the parent directory:
    
    ```
-   $ submit csx730-brk csx730
+   $ submit csx730-strace csx730
    ```
 
 <hr/>
 
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](http://creativecommonns.org/licenses/by-nc-nd/4.0/)
 
 <small>
 Copyright &copy; Michael E. Cotterell and the University of Georgia.
