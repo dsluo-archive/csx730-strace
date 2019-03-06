@@ -36,7 +36,7 @@ find the assembly notes provided in recent lecture modules on eLC useful.
    using the `write` system call instead of something more convenient like `printf(3)`. Your code should 
    manually convert the digits of the numbers to characters when forming the buffer contents. 
    No dynamic memory allocation is needed for this. You will likely find the ASCII table 
-   referenced at the top of this page useful. You may use loops.
+   referenced at the top of this page useful. You may use a loop.
 
 1. Make sure your program compiles and runs.
 
