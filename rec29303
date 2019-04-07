@@ -1,0 +1,12 @@
+csx730-strace/:
+total 60
+-rwxr-xr-x 1 ugrad  9570 Mar  6 15:06 main
+-rw-r--r-- 1 ugrad   314 Mar  6 15:05 main.c
+-rw-r--r-- 1 ugrad  6448 Mar  6 15:06 main.o
+-rw-r--r-- 1 ugrad 13155 Mar  6 15:06 main.s
+-rw-r--r-- 1 ugrad   201 Mar  6 14:45 Makefile
+-rw-r--r-- 1 ugrad  4414 Mar  6 14:45 README.md
+-rw-r--r-- 1 ugrad     0 Mar  6 15:07 rec29303
+-rw-r--r-- 1 ugrad  3553 Mar  6 15:07 SUBMISSION.md
+-rw-r--r-- 1 ugrad  3240 Mar  6 15:00 trace
+/home/ugrads/dluo/csx730-strace/:/home/work/csx730
